@@ -1,0 +1,145 @@
+\documentclass{beamer}
+\usepackage[ngerman]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{url}
+
+%% Falls Anzeige der \sections, \subsections etc. gewuenscht, kann zB
+%% das infolines theme geladen werden. Wichtig ist jedoch, dass andere
+%% Themes _vor_ dem UzK-Theme geladen werden.
+%\useoutertheme{infolines}
+
+
+\usetheme[%
+%uk,      %% Farben aller Fakultaeten
+wiso,    %% Wiso-Fakultaet
+%jura,    %% Rechtswissenschaftliche Fakultaet
+%medizin, %% Medizinische Fakultaet
+%philo,   %% Philosophische Fakultaet
+%matnat,  %% Mathematisch-Naturwissenschaftliche Fakultaet
+%human,   %% Humanwissenschaftliche Fakultaet
+%verw,    %% Universitaetsverwaltung
+%english  %% Englischer Vortrag
+]{UzK}
+
+\title{Beamer-Theme \texttt{UzK} für Präsentationen im Corporate
+  Design der Universität zu Köln}
+
+\author[David Kusterer \and Bernd Weiß]%
+{David Kusterer\thanks{ \href{mailto:kusterer@uni-koeln.de}{kusterer@uni-koeln.de} }%
+  \and%
+  Bernd Weiß\thanks{\href{mailto:bernd.weiss@wiso.uni-koeln.de}{bernd.weiss@wiso.uni-koeln.de}}}
+
+\institute[Forschungsinstitut für Soziologie]{%
+Forschungsinstitut für Soziologie \\
+Greinstraße 2\\
+50939 Köln}
+
+\begin{document}
+
+\begin{frame}[titlepage]
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Allgemeines}
+
+  \begin{itemize}
+  \item Mit diesem \emph{beamer theme} ist es möglich, Präsentationen in
+    \LaTeX{} mit der Beamer-Klasse zu erstellen, die dem Corporate Design der
+    Universität zu Köln entsprechen
+  \item Auf die Beamer-Klasse wird in diesem Dokument nicht näher eingegangen,
+    nähere Informationen finden Sie unter
+    \url{http://latex-beamer.sourceforge.net/}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Laden des Themes}
+  \begin{block}{Das Theme kann mit den folgenden Optionen geladen werden}
+    \begin{small}
+\begin{verbatim}
+\usetheme[%
+% uk,      %% Farben aller Fakultaeten
+wiso,     %% Wiso-Fakultaet
+% jura,    %% Rechtswissenschaftliche Fakultaet
+% medizin, %% Medizinische Fakultaet
+% philo,   %% Philosophische Fakultaet
+% matnat,  %% Mathematisch-Naturwissenschaftliche Fakultaet
+% human,   %% Humanwissenschaftliche Fakultaet
+% verw,    %% Universitaetsverwaltung
+% english  %% Englischer Vortrag
+]{UzK}
+\end{verbatim}
+    \end{small}
+
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Die Fußzeile}
+
+  \begin{itemize}
+  \item Es stehen verschiedene Fußzeilen zur Auswahl, die als Option
+    beim Laden des \emph{themes} übergeben werden:
+    \begin{itemize}
+    \item Balken mit allen Fakultätsfarben (Option \texttt{uk})
+    \item Balken in jeweils einer Fakultätsfarbe (Optionen \texttt{wiso, jura,
+        medizin, philo, matnat, human, verw})\footnote{Es werden die offiziellen
+        RGB-Werte aus dem 2-D Handbuch Corporate Design verwendet.}
+    \end{itemize}
+  \item "`Universität zu Köln"' sowie der Name der Fakultät sind im
+    Theme definiert, das Institut oder Seminar kann mit dem Befehl
+    \texttt{\textbackslash institute\{\}} festgelegt werden
+  \item Die Optionen sind im Quellcode dieser Präsentation dokumentiert
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Englische Präsentationen}
+  \begin{itemize}
+  \item Mit dem Setzen der Option \texttt{english} werden der Name der
+    Universität sowie die Fakultätsnamen auf Englisch angezeigt
+  \item Diese Namen können in der Theme-Datei
+    \texttt{beamerthemeUzK.sty} angepasst werden
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Installation}
+  \begin{itemize}
+  \item Das Theme besteht aus den Dateien
+    \texttt{beamerthemeUzK.sty} und \texttt{beamercolorthemeuzk.sty}
+    sowie den Grafikdateien \texttt{logo.pdf} und
+    \texttt{logo-small.pdf}.
+  \item Das Theme kann auf zwei Arten verwendet werden:
+    \begin{enumerate}
+    \item Die vier Dateien werden in den selben Ordner wie die zu
+      erstellende Präsentation gelegt
+    \item Die vier Dateien werden im lokalen \emph{texmf}-Baum abgelegt
+    \end{enumerate}
+  \item Die zweite Variante ist der ersten vorzuziehen, da das Theme
+    so an einem zentralen Ort vorliegt
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{ToDo}
+
+  \begin{block}{Was noch zu tun ist\ldots}
+    \begin{itemize}
+    \item Das Logo reicht auf der rechten Seite nicht ganz bis zum Rand
+    \item Erstellen einer eigenen Titelseite
+    \item Die Navigationssymbole sind unter die Fußleiste "`gerutscht"'
+    \item Farben für Umgebungen wie \texttt{exampleblock} definieren
+    \item \ldots
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+
+\end{document}
