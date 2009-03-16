@@ -3,7 +3,7 @@
   The grey signet in the upper right corner ist not placed well. There
   is a small amount of whitespace on the right edge of each page. The
   signet is stored in a PDF file that is copied from the official
-  [[powerpoint%20presentation%20template][powerpoint presentation template]] provided by the
+  [[http://verwaltung.uni-koeln.de/abteilung32/content/service/formularschrank/corporate_design/vorlage_fuer_praesentationen/][powerpoint presentation template]] provided by the
   Universitaetsverwaltung, so it should have the right
   dimensions. Scaling it wider, e.g. with width=1.2\pagewidth, does
   not remove the whitespace.
