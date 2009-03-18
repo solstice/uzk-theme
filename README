@@ -20,7 +20,7 @@ UzK -- EIN BEAMER-THEME FUER DIE UNIVERSITAET ZU KOELN
    die notwendigen Schritte bei Verwendung von MiKTeX dargestellt
    (Eine ausfuehrliche Anleitung zur Verwendung eines lokalen
    texmf-Baumes findet sich unter
-   http://docs.miktex.org/manual/localadditions.html).
+   http://docs.miktex.org/manual/localadditions.html ).
 
    Ich nehme im Folgenden an, dass Sie den lokalen texmf-Baum in
    C:/texmf/ anlegen wollen (diesen Pfad koennen Sie nach Belieben
@@ -44,7 +44,7 @@ UzK -- EIN BEAMER-THEME FUER DIE UNIVERSITAET ZU KOELN
    "Settings"-Fenster erneuert MiKTeX die FNDB (FileName DataBase) und
    Sie koennen das Theme fuer Ihre Beamer-Praesentationen verwenden.
 
-   Unter UNIX-ähnlichen System (Linux, Mac OS) ist das Vorgehen
+   Unter UNIX-aehnlichen System (Linux, Mac OS) ist das Vorgehen
    aequivalent: Sie erstellen ebenfalls einen Ordner, in dem Sie den
    Ordner uzk-theme ablegen. Den Pfad zu diesem Ordner tragen Sie in
    der Datei texmf/web2c/texmf.cnf ein. Zuletzt muessen Sie den Befehl
