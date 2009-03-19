@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  
+  <title>UzK - ein Beamer-Theme f&uuml;r die Universit&auml;t zu K&ouml;ln</title>
+	
+  <style type="text/css">
+    body {
+    margin-top: 1.0em;
+    background-color: white;
+    font-family: "helvetica"; 
+    color: #000000;
+    }
+    #container {
+    margin: 0 auto;
+    width: 700px;
+    }
+    h1 { font-size: 2.0em; color: black; margin-bottom: 3px; }
+    h1 .small { font-size: 0.4em; }
+    h1 a { text-decoration: none }
+    h2 { font-size: 1.3em; color: grey; }
+    h3 { text-align: center; color: #1b3b93; }
+    a { color: #1b3b93; }
+    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: inherit;}
+    .download { float: right; }
+    pre { background: #000; color: #fff; padding: 15px;}
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .footer { text-align:center; padding-top:30px; font-style: inherit; font-size: 0.8em; }
+  </style>
+  
+</head>
+
+<body>
+  <a href="http://github.com/solstice/uzk-theme"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+  
+</body>
+<div id=container>
+
+<div class="download">
+  <a href="http://github.com/solstice/uzk-theme/zipball/master">
+    <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+  <a href="http://github.com/solstice/uzk-theme/tarball/master">
+    <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+</div>
+
+<h1>UzK - <small>ein Beamer-Theme f&uuml;r die Universit&auml;t zu K&ouml;ln</small></h1>
+
+<h2>Allgemeines</h2>
+<a href="http://github.com/solstice/uzk-theme/raw/master/UzK-Example.pdf"><img src="example.png" alt="Beispiel-Slide" align="right"></a>
+
+<p>
+UzK ist ein (inoffizielles) Theme f&uuml;r
+die <a href="http://latex-beamer.sourceforge.net/">latex-beamer</a>-Klasse,
+das den Vorgaben des <a href="Corporate Designs">Corporate Designs</a>
+der Universit&auml;t zu K&ouml;ln entsprechend entwickelt wurde.
+</p>
+
+<p>
+Laden
+Sie <a href="http://github.com/solstice/uzk-theme/raw/master/UzK-Example.pdf">hier</a>
+eine Beispielpr&auml;sentation herunter.
+</p>
+
+<h2>Autoren</h2>
+
+David Kusterer (david.kusterer (bei) gmail.com) <br /><br />
+Bernd Wei&szlig;
+
+<h2>Verwendung</h2> Mit dem folgenden LaTeX-Code erstellen Sie eine
+Beamer-Pr&auml;sentation im Corporate Design der Universit&auml;t zu K&ouml;ln:
+
+<pre>
+\documentclass{beamer}
+
+\usetheme[%
+%uk,      %% Farben aller Fakultaeten
+wiso,    %% Wiso-Fakultaet
+%jura,    %% Rechtswissenschaftliche Fakultaet
+%medizin, %% Medizinische Fakultaet
+%philo,   %% Philosophische Fakultaet
+%matnat,  %% Mathematisch-Naturwissenschaftliche Fakultaet
+%human,   %% Humanwissenschaftliche Fakultaet
+%verw,    %% Universitaetsverwaltung
+%english  %% Englischer Vortrag
+]{UzK}
+
+\title{Meine Praesentation}
+\author{Hans Mustermann}
+
+\begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
+\end{document}
+</pre>
+
+Dem Theme k&ouml;nnen verschiedene Optionen &uuml;bergeben werden. Sie k&ouml;nnen
+aus verschiedenen Fu&szlig;zeilen w&auml;hlen: Mit der Option <tt>uk</tt> wird
+der Balken in der Fu&szlig;zeile in den Farben aller sechs Fakult&auml;ten sowie
+der Farbe der Verwaltung dargestellt. M&ouml;chten Sie den Balken jedoch
+einfarbig mit Ihrer jeweiligen Fakult&auml;tsfarbe gef&uuml;llt, so erreichen
+Sie dies mit den Optionen <tt>wiso, jura, medizin, philo, matnat,
+human</tt> und <tt>verw</tt>.
+
+F&uuml;r englische Pr&auml;sentationen verwenden Sie die
+Option <tt>english</tt>. Der Name der Universit&auml;t sowie die
+Fakult&auml;tsnamen werden dann entsprechend angepasst.
+</p>
+
+<p>
+Aus lizenzrechtlichen Gr&uuml;nden k&ouml;nnen wir die Logo-Dateien momentan
+nicht &ouml;ffentlich bereitstellen. Angeh&ouml;rigen der Universit&auml;t zu K&ouml;ln
+senden wir diese jedoch gerne per Email zu. <p/>
+
+<h2>Entwicklung</h2>
+
+<p>
+Wir freuen uns &uuml;ber jegliche Anmerkungen, Kritik etc. Falls Sie sich
+an der Entwicklung beteiligen m&ouml;chten, k&ouml;nnen Sie das Theme einfach
+mit <a href="http://git-scm.com/">git</a> klonen:
+
+<pre>$ git clone git://github.com/solstice/uzk-theme.git</pre> 
+
+ Sie k&ouml;nnen den Quelltext ebenfalls
+als <a href="http://github.com/solstice/uzk-theme/zipball/master">.zip</a>
+oder <a href="http://github.com/solstice/uzk-theme/tarball/master">.tar</a>-Datei
+herunterladen.
+</p>
+
+
+</div>
+
+<hr>
+<div class="footer">Das <a href="http://www.github.com/solstice/uzk-theme">UzK-Theme</a>
+wird bei <a href="http://github.com">GitHub</a> gehostet.</div>
+</html>
+
