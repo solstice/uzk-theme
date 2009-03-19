@@ -24,7 +24,7 @@ UzK -- EIN BEAMER-THEME FUER DIE UNIVERSITAET ZU KOELN
    die notwendigen Schritte bei Verwendung von MiKTeX dargestellt
    (Eine ausfuehrliche Anleitung zur Verwendung eines lokalen
    texmf-Baumes findet sich unter
-   http://docs.miktex.org/manual/localadditions.html).
+   http://docs.miktex.org/manual/localadditions.html ).
 
    Im Folgenden wird angenommen, dass Sie den lokalen texmf-Baum in
    C:/texmf/ anlegen wollen (diesen Pfad koennen Sie nach Belieben
