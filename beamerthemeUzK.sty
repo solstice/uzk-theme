@@ -21,8 +21,16 @@
 \usecolortheme{uzk}
 
 %% Einbinden des Hintergrundlogos
-\pgfdeclareimage[height=\paperheight, width=\paperwidth]{hintergrund}{logo}
-\logo{\pgfuseimage{hintergrund}}
+\defbeamertemplate*{background}{UzK theme}{%
+  \begingroup%
+  \setlength{\unitlength}{\paperwidth}%
+  \begin{picture}(1,1)%
+    \put(-0.02,0.25){
+    \fbox{\includegraphics[width=\paperwidth]{logo}}%
+  }%
+  \end{picture}%
+  \endgroup%
+}
 
 %% Setze die Fakultaetsnamen
 \newcommand{\uni}{Universit\"at zu K\"oln}%
