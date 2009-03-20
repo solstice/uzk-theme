@@ -57,3 +57,7 @@ UzK -- EIN BEAMER-THEME FUER DIE UNIVERSITAET ZU KOELN
    der Datei texmf/web2c/texmf.cnf ein. Zuletzt muessen Sie den Befehl
    'texhash' auf der Kommandozeile ausfuehren, damit TeX von der
    Existenz des neuen Ordners erfaehrt.
+
+3. Mitwirkende
+   
+   - Martin Engler: Sprachauswahl über babel
