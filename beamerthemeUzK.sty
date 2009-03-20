@@ -12,10 +12,9 @@
 \DeclareOptionBeamer{human}[true]{\def\beamer@UzK@human{#1}}
 \DeclareOptionBeamer{verw}[true]{\def\beamer@UzK@verw{#1}}
 \DeclareOptionBeamer{uk}[true]{\def\beamer@UzK@uk{#1}}
-\DeclareOptionBeamer{english}[true]{\def\beamer@UzK@english{#1}}
 
 \ExecuteOptionsBeamer{wiso=false, jura=false, medizin=false,
-  philo=false, matnat=false, human=false, verw=false, english=false}
+  philo=false, matnat=false, human=false, verw=false}
 
 \ProcessOptionsBeamer
 
@@ -25,29 +24,52 @@
 \pgfdeclareimage[height=\paperheight, width=\paperwidth]{hintergrund}{logo}
 \logo{\pgfuseimage{hintergrund}}
 
-%% Die Fakultaetsnamen sowie deren englische Uebersetzung koennen hier nach
-%% Bedarf angepasst werden
-\def\beamer@UzK@truetext{true}%
-\ifx\beamer@UzK@english\beamer@UzK@truetext%
-\newcommand{\uni}{University of Cologne}
-\newcommand{\wiso}{Faculty of Management, Economics and Social
-  Sciences}
-\newcommand{\jura}{Faculty of Law}
-\newcommand{\medizin}{Faculty of Medicine}
-\newcommand{\philo}{Faculty of Arts}
-\newcommand{\matnat}{Faculty of Mathematics and Natural Sciences}
-\newcommand{\human}{Faculty of Human Sciences}
-\newcommand{\verw}{University of Cologne Administration}
-\else%
-\newcommand{\uni}{Universit\"at zu K\"oln}
-\newcommand{\wiso}{Wirtschafts- und Sozialwissenschaftliche Fakult\"at}
-\newcommand{\jura}{Rechtswissenschaftliche Fakult\"at}
-\newcommand{\medizin}{Medizinische Fakult\"at}
-\newcommand{\philo}{Philosophische Fakult\"at}
-\newcommand{\matnat}{Mathematisch-Naturwissenschaftliche Fakult\"at}
-\newcommand{\human}{Humanwissenschaftliche Fakult\"at}
-\newcommand{\verw}{Universit\"atsverwaltung}
-\fi%
+%% Setze die Fakultaetsnamen
+\newcommand{\uni}{Universit\"at zu K\"oln}%
+\newcommand{\wiso}{Wirtschafts- und Sozialwissenschaftliche Fakult\"at}%
+\newcommand{\jura}{Rechtswissenschaftliche Fakult\"at}%
+\newcommand{\medizin}{Medizinische Fakult\"at}%
+\newcommand{\philo}{Philosophische Fakult\"at}%
+\newcommand{\matnat}{Mathematisch-Naturwissenschaftliche Fakult\"at}%
+\newcommand{\human}{Humanwissenschaftliche Fakult\"at}%
+\newcommand{\verw}{Universit\"atsverwaltung}%
+
+%% Teste ob Babel geladen wurde und setze Fakultatsname sowie deren Uebersetzung
+%% Diese koennen hier nach Bedarf angepasst werden
+\ifdefined\addto%
+\newcommand{\UzK@captionsgerman}{%
+\renewcommand{\uni}{Universit\"at zu K\"oln}%
+\renewcommand{\wiso}{Wirtschafts- und Sozialwissenschaftliche Fakult\"at}%
+\renewcommand{\jura}{Rechtswissenschaftliche Fakult\"at}%
+\renewcommand{\medizin}{Medizinische Fakult\"at}%
+\renewcommand{\philo}{Philosophische Fakult\"at}%
+\renewcommand{\matnat}{Mathematisch-Naturwissenschaftliche Fakult\"at}%
+\renewcommand{\human}{Humanwissenschaftliche Fakult\"at}%
+\renewcommand{\verw}{Universit\"atsverwaltung}%
+}
+\newcommand{\UzK@captionsenglish}{%
+\renewcommand{\uni}{University of Cologne}%
+\renewcommand{\wiso}{Faculty of Management, Economics and Social Sciences}%
+\renewcommand{\jura}{Faculty of Law}%
+\renewcommand{\medizin}{Faculty of Medicine}%
+\renewcommand{\philo}{Faculty of Arts}%
+\renewcommand{\matnat}{Faculty of Mathematics and Natural Sciences}%
+\renewcommand{\human}{Faculty of Human Sciences}%
+\renewcommand{\verw}{University of Cologne Administration}%
+}
+\addto{\captionsgerman}{\UzK@captionsgerman}
+\addto{\captionsngerman}{\UzK@captionsgerman}
+\addto{\captionsaustrian}{\UzK@captionsgerman}
+\addto{\captionsnaustrian}{\UzK@captionsgerman}
+\addto{\captionsenglish}{\UzK@captionsenglish}
+\addto{\captionsUKenglish}{\UzK@captionsenglish}
+\addto{\captionsbritish}{\UzK@captionsenglish}
+\addto{\captionsamerican}{\UzK@captionsenglish}
+\addto{\captionsUSenglish}{\UzK@captionsenglish}
+\addto{\captionscanadian}{\UzK@captionsenglish}
+\addto{\captionsaustralian}{\UzK@captionsenglish}
+\addto{\captionsnewzealan}{\UzK@captionsenglish}
+\fi %\ifdefined\addto
 
 %% Definiere die Standardfusszeile mit allen Fakultaetsfarben
 \defbeamertemplate*{footline uk}{UzK theme}[1][]
