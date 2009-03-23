@@ -104,23 +104,30 @@
   }
   \vskip.5em
   \hbox{
-    \hspace{.5\paperwidth}
+    \hspace{.01\paperwidth}
+    \begin{beamercolorbox}[wd=.23\paperwidth, dp=1ex, ht=2ex]{}%
+      \insertshortinstitute
+    \end{beamercolorbox}
+  }
+  \hbox{
+    \hspace{.01\paperwidth}
+    \begin{beamercolorbox}[wd=.5\paperwidth, dp=1ex, ht=2ex]{}%
+      \insertshortauthor
+    \end{beamercolorbox}
     \begin{beamercolorbox}[wd=.23\paperwidth, dp=1ex, ht=2ex]{}%
       \textbf{\uni}
     \end{beamercolorbox}
   }
   \hbox{
-    \hspace{.5\paperwidth}
     \begin{beamercolorbox}[wd=.23\paperwidth, dp=1ex, ht=2ex]{}%
-      \insertshortauthor
     \end{beamercolorbox}
-  }
-  \hbox{
-    \hspace{.5\paperwidth}
-    \begin{beamercolorbox}[wd=.23\paperwidth, dp=2ex, ht=2ex]{}%
-      \emph{\insertshortinstitute}
-    \end{beamercolorbox}
-  }
+}
+%   \hbox{
+%     \hspace{.5\paperwidth}
+%     \begin{beamercolorbox}[wd=.23\paperwidth, dp=2ex, ht=2ex]{}%
+%       \emph{\insertshortinstitute}
+%     \end{beamercolorbox}
+%   }
   \pgfdeclareimage[height=1cm]{logosm}{logo-small}%
   \vskip-1cm
   \llap{\pgfuseimage{logosm}\hskip-.875\paperwidth}%
@@ -184,6 +191,12 @@
         \verw
       \fi
     \end{beamercolorbox}
+  }
+  \hbox{
+    \hspace{.01\paperwidth}
+    \begin{beamercolorbox}[wd=.5\paperwidth, dp=1ex, ht=2ex]{}%
+      \insertshortinstitute
+    \end{beamercolorbox}
     \begin{beamercolorbox}[]{}
       \textbf{\uni}
     \end{beamercolorbox}
@@ -191,12 +204,6 @@
   \hbox{
     \hspace{.01\paperwidth}
     \begin{beamercolorbox}[wd=.23\paperwidth, dp=1ex, ht=2ex]{}%
-      \insertshortinstitute
-    \end{beamercolorbox}
-  }
-  \hbox{
-    \hspace{.01\paperwidth}
-    \begin{beamercolorbox}[wd=.23\paperwidth, dp=2ex, ht=2ex]{}%
       \insertshortauthor
     \end{beamercolorbox}
   }
