@@ -3,7 +3,7 @@ UzK -- EIN BEAMER-THEME FUER DIE UNIVERSITAET ZU KOELN
 
 1. Allgemeines
 
-   Version 0.1
+   Version 0.2
 
    Die aktuelle Version finden Sie unter
    http://solstice.github.com/uzk-theme
@@ -58,7 +58,8 @@ UzK -- EIN BEAMER-THEME FUER DIE UNIVERSITAET ZU KOELN
    'texhash' auf der Kommandozeile ausfuehren, damit TeX von der
    Existenz des neuen Ordners erfaehrt.
 
-3. Mitwirkende
+3. Mitwirkende und Dank an:
    
+   - Jan Eden
    - Martin Engler: Sprachauswahl ueber babel, Platzierung der
      Hintergrundgrafik
