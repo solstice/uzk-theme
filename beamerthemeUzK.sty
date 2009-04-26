@@ -4,14 +4,14 @@
 \mode<presentation>
 
 %% Definiere die moeglichen Optionen
-\DeclareOptionBeamer{wiso}[true]{\def\beamer@UzK@wiso{#1}}
-\DeclareOptionBeamer{jura}[true]{\def\beamer@UzK@jura{#1}}
-\DeclareOptionBeamer{medizin}[true]{\def\beamer@UzK@medizin{#1}}
-\DeclareOptionBeamer{philo}[true]{\def\beamer@UzK@philo{#1}}
-\DeclareOptionBeamer{matnat}[true]{\def\beamer@UzK@matnat{#1}}
-\DeclareOptionBeamer{human}[true]{\def\beamer@UzK@human{#1}}
-\DeclareOptionBeamer{verw}[true]{\def\beamer@UzK@verw{#1}}
-\DeclareOptionBeamer{uk}[true]{\def\beamer@UzK@uk{#1}}
+\DeclareOptionBeamer{wiso}[true]{\def\beamer@UzK@wiso{#1}\newcommand{\fak}{wiso}}
+\DeclareOptionBeamer{jura}[true]{\def\beamer@UzK@jura{#1}\newcommand{\fak}{jura}}
+\DeclareOptionBeamer{medizin}[true]{\def\beamer@UzK@medizin{#1}\newcommand{\fak}{medizin}}
+\DeclareOptionBeamer{philo}[true]{\def\beamer@UzK@philo{#1}\newcommand{\fak}{philo}}
+\DeclareOptionBeamer{matnat}[true]{\def\beamer@UzK@matnat{#1}\newcommand{\fak}{matnat}}
+\DeclareOptionBeamer{human}[true]{\def\beamer@UzK@human{#1}\newcommand{\fak}{human}}
+\DeclareOptionBeamer{verw}[true]{\def\beamer@UzK@verw{#1}\newcommand{\fak}{verw}}
+\DeclareOptionBeamer{uk}[true]{\def\beamer@UzK@uk{#1}\newcommand{\fak}{wiso}}
 
 \ExecuteOptionsBeamer{wiso=false, jura=false, medizin=false,
   philo=false, matnat=false, human=false, verw=false, uk=false}
@@ -31,7 +31,7 @@
   \end{picture}%
   \endgroup%
 }
-
+  
 %% Setze die Fakultaetsnamen
 \newcommand{\uni}{Universit\"at zu K\"oln}%
 \newcommand{\wiso}{Wirtschafts- und Sozialwissenschaftliche Fakult\"at}%
