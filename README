@@ -3,7 +3,7 @@ UzK -- EIN BEAMER-THEME FUER DIE UNIVERSITAET ZU KOELN
 
 1. Allgemeines
 
-   Version 0.3
+   Version 0.4
 
    Die aktuelle Version finden Sie unter
    http://solstice.github.com/uzk-theme
@@ -60,6 +60,6 @@ UzK -- EIN BEAMER-THEME FUER DIE UNIVERSITAET ZU KOELN
 
 3. Mitwirkende und Dank an:
    
-   - Jan Eden
+   - Jan Eden: Schriftart Fusszeile
    - Martin Engler: Sprachauswahl ueber babel, Platzierung der
      Hintergrundgrafik
