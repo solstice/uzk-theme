@@ -17,14 +17,14 @@ Das Theme besteht aus den folgenden Dateien:
 - `README.md`
 - `beamerthemeUzK.sty`
 - `beamercolorthemeuzk.sty`
-- `logo.pdf` (Platzhalter)
-- `logo-small.pdf` (Platzhalter)
+- `logo.pdf`
+- `logo-small.pdf`
 - `UzK-Example.tex` (lauffaehiges Beispiel)
 - `UzK-Example.pdf` (PDF-Beispiel und aktuelle Anleitung fuer die
   verschiedenen Optionen von UzK)
 
-Die Siegeldateien koennen wir nicht oeffentlich bereitstellen. Sie erhalten
-diese bei den Ansprechpartnern fuer das [Corporate Design](http://verwaltung.uni-koeln.de/corporate_design).
+Bitte beachten Sie die [Richtlinien zur Siegelverwendung](http://kommunikation-marketing.uni-koeln.de/marketing/corporate_design/siegelverwendung_logo_der_universitaet/index_ger.html)
+der Universität zu Koeln.
 
 Um das Theme permanent zu installieren, legen Sie die Dateien im lokalen
 texmf-Baum ab. Die Vorgehensweise haengt von der von Ihnen verwendeten
