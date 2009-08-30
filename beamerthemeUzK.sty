@@ -1,23 +1,71 @@
 %% UzK - A BEAMER THEME FOR THE UNIVERSITY OF COLOGNE
 %% http://solstice.github.com/uzk-theme/
+\ProvidesPackage{beamerthemeUzK}[2009/08/30]
 
 \mode<presentation>
 
-%% Definiere die moeglichen Optionen
-\DeclareOptionBeamer{wiso}[true]{\def\beamer@UzK@wiso{#1}\newcommand{\fak}{wiso}}
-\DeclareOptionBeamer{jura}[true]{\def\beamer@UzK@jura{#1}\newcommand{\fak}{jura}}
-\DeclareOptionBeamer{medizin}[true]{\def\beamer@UzK@medizin{#1}\newcommand{\fak}{medizin}}
-\DeclareOptionBeamer{philo}[true]{\def\beamer@UzK@philo{#1}\newcommand{\fak}{philo}}
-\DeclareOptionBeamer{matnat}[true]{\def\beamer@UzK@matnat{#1}\newcommand{\fak}{matnat}}
-\DeclareOptionBeamer{human}[true]{\def\beamer@UzK@human{#1}\newcommand{\fak}{human}}
-\DeclareOptionBeamer{verw}[true]{\def\beamer@UzK@verw{#1}\newcommand{\fak}{verw}}
-\DeclareOptionBeamer{uk}[true]{\def\beamer@UzK@uk{#1}\newcommand{\fak}{wiso}}
+%% Erstelle logische Variablen ---------------------------------------------- %%
+\newif\ifbeamer@UzK@wiso
+\newif\ifbeamer@UzK@jura
+\newif\ifbeamer@UzK@medizin
+\newif\ifbeamer@UzK@philo
+\newif\ifbeamer@UzK@matnat
+\newif\ifbeamer@UzK@human
+\newif\ifbeamer@UzK@verw
+\newif\ifbeamer@UzK@uk
+\newif\ifbeamer@UzK@nav
+\newif\ifbeamer@UzK@latexfonts
+
+%% Standardmaessig sind diese Variablen auf 'false' gesetzt. Falls keine      %%
+%% Fakultaet uebergeben wird, soll 'uk' verwendet werden: ------------------- %%
+\beamer@UzK@wisofalse
+\beamer@UzK@jurafalse
+\beamer@UzK@medizinfalse
+\beamer@UzK@philofalse
+\beamer@UzK@matnatfalse
+\beamer@UzK@humanfalse
+\beamer@UzK@verwfalse
+\beamer@UzK@uktrue
+\beamer@UzK@navfalse
+\beamer@UzK@latexfontsfalse
+
+%% Definiere die moeglichen Optionen ---------------------------------------- %%
+
+%% Die Variable \fak wird in beamercolorthemeuzk.sty verwendet, um die Farben %%
+%% fuer exampleblocks zu kontrollieren. Sie wird hier bereits gesetzt falls   %%
+%% kein Fakultaetsname uebergeben wird. ------------------------------------- %%
+\newcommand{\fak}{wiso}
+%% Ausserdem wird die Variable \beamer@Uzk@uk auf false gesetzt, falls eine   %%
+%% Fakultaet angegeben wurde. ----------------------------------------------- %%
+\DeclareOptionBeamer{wiso}{\beamer@UzK@wisotrue \beamer@UzK@ukfalse \renewcommand{\fak}{wiso}}
+\DeclareOptionBeamer{jura}{\beamer@UzK@juratrue \beamer@UzK@ukfalse \renewcommand{\fak}{jura}}
+\DeclareOptionBeamer{medizin}{\beamer@UzK@medizintrue \beamer@UzK@ukfalse \renewcommand{\fak}{medizin}}
+\DeclareOptionBeamer{philo}{\beamer@UzK@philotrue \beamer@UzK@ukfalse \renewcommand{\fak}{philo}}
+\DeclareOptionBeamer{matnat}{\beamer@UzK@matnattrue \beamer@UzK@ukfalse \renewcommand{\fak}{matnat}}
+\DeclareOptionBeamer{human}{\beamer@UzK@humantrue \beamer@UzK@ukfalse \renewcommand{\fak}{human}}
+\DeclareOptionBeamer{verw}{\beamer@UzK@verwtrue \beamer@UzK@ukfalse \renewcommand{\fak}{verw}}
+\DeclareOptionBeamer{nav}{\beamer@UzK@navtrue}
+\DeclareOptionBeamer{latexfonts}{\beamer@UzK@latexfontstrue}
 
 \ProcessOptionsBeamer
 
-\usecolortheme{uzk}
+\usecolortheme{UzK}
 
-%% Einbinden des Hintergrundlogos
+%% Schalte die Navigationsleiste aus ---------------------------------------- %%
+\ifbeamer@UzK@nav
+\else
+  \setbeamertemplate{navigation symbols}{}
+\fi
+
+%% Anpassen der Schrift an die Vorgaben des Corporate Designs --------------- %%
+\ifbeamer@UzK@latexfonts
+\else
+  \usepackage{helvet}
+  \setbeamerfont*{frametitle}{series = \bfseries, size = \Large}
+  \setbeamerfont*{title}{series = \bfseries, size = \Large}
+\fi
+
+%% Einbinden des Hintergrundlogos ------------------------------------------- %%
 \defbeamertemplate*{background}{UzK theme}{%
   \begingroup%
   \setlength{\unitlength}{\paperwidth}%
@@ -28,6 +76,9 @@
   \end{picture}%
   \endgroup%
 }
+
+%% Definiere das kleine Siegel ---------------------------------------------- %%
+\pgfdeclareimage[height=1cm]{logosm}{logo-small}%
   
 %% Setze die Fakultaetsnamen
 \newcommand{\uni}{Universit\"at zu K\"oln}%
@@ -77,7 +128,7 @@
 \fi %\ifdefined\addto
 
 %% Definiere die Standardfusszeile mit allen Fakultaetsfarben
-\defbeamertemplate*{footline uk}{UzK theme}[1][]
+\defbeamertemplate*{footline uk}{UzK theme}
 {
   \leavevmode%
   \hbox{%
@@ -125,36 +176,35 @@
 %       \emph{\insertshortinstitute}
 %     \end{beamercolorbox}
 %   }
-  \pgfdeclareimage[height=1cm]{logosm}{logo-small}%
   \vskip-1cm
   \llap{\pgfuseimage{logosm}\hskip-.875\paperwidth}%
   \vspace{1ex}
 }
 
 %% Definiere die alternativen Fusszeilen in den jeweiligen Fakultaetsfarben
-\defbeamertemplate*{footline faculty}{UzK theme}[1][]
+\defbeamertemplate*{footline faculty}{UzK theme}
 {
   \leavevmode%
   \hbox{%
-  \ifx\beamer@UzK@wiso\beamer@UzK@truetext%
+  \ifbeamer@UzK@wiso%
     \begin{beamercolorbox}[wd=.875\paperwidth, ht=1.5ex]{uzk wiso}
   \fi
-  \ifx\beamer@UzK@jura\beamer@UzK@truetext%
+  \ifbeamer@UzK@jura%
     \begin{beamercolorbox}[wd=.875\paperwidth, ht=1.5ex]{uzk jura}
   \fi
-  \ifx\beamer@UzK@medizin\beamer@UzK@truetext%
+  \ifbeamer@UzK@medizin%
     \begin{beamercolorbox}[wd=.875\paperwidth, ht=1.5ex]{uzk medizin}
   \fi
-  \ifx\beamer@UzK@philo\beamer@UzK@truetext%
+  \ifbeamer@UzK@philo%
     \begin{beamercolorbox}[wd=.875\paperwidth, ht=1.5ex]{uzk philo}
   \fi
-  \ifx\beamer@UzK@matnat\beamer@UzK@truetext%
+  \ifbeamer@UzK@matnat%
     \begin{beamercolorbox}[wd=.875\paperwidth, ht=1.5ex]{uzk matnat}
   \fi
-  \ifx\beamer@UzK@human\beamer@UzK@truetext%
+  \ifbeamer@UzK@human%
     \begin{beamercolorbox}[wd=.875\paperwidth, ht=1.5ex]{uzk human}
   \fi
-  \ifx\beamer@UzK@verw\beamer@UzK@truetext%
+  \ifbeamer@UzK@verw%
     \begin{beamercolorbox}[wd=.875\paperwidth, ht=1.5ex]{uzk verw}
   \fi
     \end{beamercolorbox}%
@@ -166,25 +216,25 @@
   \hbox{
     \hspace{.01\paperwidth}
     \begin{beamercolorbox}[wd=.5\paperwidth, dp=.5ex, ht=2.5ex]{}%
-      \ifx\beamer@UzK@wiso\beamer@UzK@truetext%
+      \ifbeamer@UzK@wiso%
         \fontseries{bc}\selectfont\wiso
       \fi
-      \ifx\beamer@UzK@jura\beamer@UzK@truetext%
+      \ifbeamer@UzK@jura%
         \fontseries{bc}\selectfont\jura
       \fi
-      \ifx\beamer@UzK@medizin\beamer@UzK@truetext%
+      \ifbeamer@UzK@medizin%
         \fontseries{bc}\selectfont\medizin
       \fi
-      \ifx\beamer@UzK@philo\beamer@UzK@truetext%
+      \ifbeamer@UzK@philo%
         \fontseries{bc}\selectfont\philo
       \fi
-      \ifx\beamer@UzK@matnat\beamer@UzK@truetext%
+      \ifbeamer@UzK@matnat%
         \fontseries{bc}\selectfont\matnat
       \fi
-      \ifx\beamer@UzK@human\beamer@UzK@truetext%
+      \ifbeamer@UzK@human%
         \fontseries{bc}\selectfont\human
       \fi
-      \ifx\beamer@UzK@verw\beamer@UzK@truetext%
+      \ifbeamer@UzK@verw%
         \fontseries{bc}\selectfont\verw
       \fi
     \end{beamercolorbox}
@@ -204,38 +254,36 @@
       \fontseries{mc}\selectfont\insertshortauthor
     \end{beamercolorbox}
   }
-  \pgfdeclareimage[height=1cm]{logosm}{logo-small}%
   \vskip-1cm
   \llap{\pgfuseimage{logosm}\hskip-.875\paperwidth}%
   \vspace{1ex}
 }
 
 %% Waehle die Fusszeile entsprechend der uebergebenen Option
-\defbeamertemplate*{footline}{UzK theme}[1][]
+\defbeamertemplate*{footline}{UzK theme}
 {
-  \def\beamer@UzK@truetext{true}%
-  \ifx\beamer@UzK@wiso\beamer@UzK@truetext%
+  \ifbeamer@UzK@wiso%
     \usebeamertemplate{footline faculty}%
   \fi
-  \ifx\beamer@UzK@medizin\beamer@UzK@truetext%
+  \ifbeamer@UzK@medizin%
     \usebeamertemplate{footline faculty}%
   \fi
-  \ifx\beamer@UzK@philo\beamer@UzK@truetext%
+  \ifbeamer@UzK@philo%
     \usebeamertemplate{footline faculty}%
   \fi
-  \ifx\beamer@UzK@matnat\beamer@UzK@truetext%
+  \ifbeamer@UzK@matnat%
     \usebeamertemplate{footline faculty}%
   \fi
-  \ifx\beamer@UzK@human\beamer@UzK@truetext%
+  \ifbeamer@UzK@human%
     \usebeamertemplate{footline faculty}%
   \fi
-  \ifx\beamer@UzK@verw\beamer@UzK@truetext%
+  \ifbeamer@UzK@verw%
     \usebeamertemplate{footline faculty}%
   \fi
-  \ifx\beamer@UzK@jura\beamer@UzK@truetext%
+  \ifbeamer@UzK@jura%
     \usebeamertemplate{footline faculty}%
   \fi
-  \ifx\beamer@UzK@uk\beamer@UzK@truetext%
+  \ifbeamer@UzK@uk%
     \usebeamertemplate{footline uk}%
   \fi%
 }

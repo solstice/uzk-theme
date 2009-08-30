@@ -7,30 +7,23 @@
 \usepackage{graphicx}
 \usepackage{url}
 
-%% Anpassen der Schriftart und -groesse an die Vorgaben des Corporate
-%% Designs
-\usepackage{helvet}
-\setbeamerfont*{frametitle}{series = \bfseries, size = \Large}
-\setbeamerfont*{title}{series = \bfseries, size = \Large}
-
-%% Schalte die Navigationssybole aus
-\setbeamertemplate{navigation symbols}{}
-
 %% Falls Anzeige der \sections, \subsections etc. gewuenscht, kann zB
 %% das infolines theme geladen werden. Wichtig ist jedoch, dass andere
 %% Themes _vor_ dem UzK-Theme geladen werden.
 %\useoutertheme{infolines}
 
+%% Falls keine der Optionen zur Bestimmung der Fusszeile uebergeben werden    %%
+%% werden alle Fakultaetsfarben verwendet. ---------------------------------- %%
 \usetheme[%
-%% setze Optionen fuer die Fusszeile
-uk,      %% Farben aller Fakultaeten
-%wiso,    %% Wiso-Fakultaet
-%jura,    %% Rechtswissenschaftliche Fakultaet
-%medizin, %% Medizinische Fakultaet
-%philo,   %% Philosophische Fakultaet
-%matnat,  %% Mathematisch-Naturwissenschaftliche Fakultaet
-%human,   %% Humanwissenschaftliche Fakultaet
-%verw,    %% Universitaetsverwaltung
+%wiso,        %% Wiso-Fakultaet
+%jura,        %% Rechtswissenschaftliche Fakultaet
+%medizin,     %% Medizinische Fakultaet
+%philo,       %% Philosophische Fakultaet
+%matnat,      %% Mathematisch-Naturwissenschaftliche Fakultaet
+%human,       %% Humanwissenschaftliche Fakultaet
+%verw,        %% Universitaetsverwaltung
+%nav,         %% Schaltet die Navigationssymbole ein
+%latexfonts,  %% verwendet die latex-beamer-Standardschrift
 ]{UzK}
 
 \title{Beamer-Theme \texttt{UzK} für Präsentationen im Corporate
