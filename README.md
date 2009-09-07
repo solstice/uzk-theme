@@ -14,14 +14,17 @@ Installation
 
 Das Theme besteht aus den folgenden Dateien:
 
-- README
-- beamerthemeUzK.sty
-- beamercolorthemeuzk.sty
-- logo.pdf (Platzhalter)
-- logo-small.pdf (Platzhalter)
-- UzK-Example.tex (lauffaehiges Beispiel)
-- UzK-Example.pdf (PDF-Beispiel und aktuelle Anleitung fuer die
+- `README.md`
+- `beamerthemeUzK.sty`
+- `beamercolorthemeuzk.sty`
+- `logo.pdf` (Platzhalter)
+- `logo-small.pdf` (Platzhalter)
+- `UzK-Example.tex` (lauffaehiges Beispiel)
+- `UzK-Example.pdf` (PDF-Beispiel und aktuelle Anleitung fuer die
   verschiedenen Optionen von UzK)
+
+Die Siegeldateien koennen wir nicht oeffentlich bereitstellen. Sie erhalten
+diese bei den Ansprechpartnern fuer das [Corporate Design](http://verwaltung.uni-koeln.de/corporate_design).
 
 Um das Theme permanent zu installieren, legen Sie die Dateien im lokalen
 texmf-Baum ab. Die Vorgehensweise haengt von der von Ihnen verwendeten
@@ -52,9 +55,18 @@ DataBase) und Sie koennen das Theme fuer Ihre Beamer-Praesentationen
 verwenden.
 
 Unter UNIX-aehnlichen System (Linux, Mac OS) ist das Vorgehen analog: Sie
-erstellen ebenfalls einen Ordner, in dem Sie den Ordner `uzk-theme` ablegen.
-Den Pfad zu diesem Ordner tragen Sie in der Datei `texmf/web2c/texmf.cnf` ein.
-Zuletzt muessen Sie den Befehl `texhash` auf der Kommandozeile ausfuehren,
+erstellen ebenfalls einen lokalen `texmf`-tree, in dem Sie den Ordner
+`uzk-theme` ablegen. Am Mac koennen Sie ihren lokalen `texmf`-tree z.B. in
+`~/Library/texmf/` anlegen. Den Pfad zu diesem Ordner tragen Sie in der Datei
+`texmf.cnf` ein:
+
+     TEXMFHOME = ~/Library/texmf
+
+Die `texmf.cnf` liegt z.B. bei Verwendung von [MacTeX](https://www.tug.org/mactex/)
+in `/usr/local/texlive/2008/`. Falls diese Datei dort noch nicht existiert, so
+legen Sie diese einfach neu an.
+
+Zuletzt muessen Sie den Befehl `sudo texhash` auf der Kommandozeile ausfuehren,
 damit TeX von der Existenz des neuen Ordners erfaehrt.
 
 Mitwirkende und Dank an:
