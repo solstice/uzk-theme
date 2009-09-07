@@ -4,7 +4,7 @@ UzK -- Ein Beamer-Theme fuer die Universitaet zu Koeln
 Allgemeines
 -----------
 
-Version 0.4
+Version 0.5
 
 Die aktuellste Version finden Sie auf
 [GitHub](http://solstice.github.com/uzk-theme).
