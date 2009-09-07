@@ -131,6 +131,9 @@ oder <a href="http://github.com/solstice/uzk-theme/tarball/master">.tar</a>-Date
 herunterladen.
 </p>
 
+<h2>Kommentare</h2>
+
+<div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/uzk-theme/embed.js"></script><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 </div>
 
@@ -147,6 +150,21 @@ try {
 var pageTracker = _gat._getTracker("UA-2889494-4");
 pageTracker._trackPageview();
 } catch(err) {}</script>
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+	var links = document.getElementsByTagName('a');
+	var query = '?';;
+	for(var i = 0; i < links.length; i++) {
+	if(links[i].href.indexOf('#disqus_thread') >= 0) {
+		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+	}
+	}
+	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/uzk-theme/get_num_replies.js' + query + '"></' + 'script>');
+})();
+//]]>
+</script>
 
 </body>
 </html>
