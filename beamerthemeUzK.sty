@@ -59,10 +59,16 @@
 
 %% Anpassen der Schrift an die Vorgaben des Corporate Designs --------------- %%
 \ifbeamer@UzK@latexfonts
-\else
-  \usepackage{helvet}
   \setbeamerfont*{frametitle}{series = \bfseries, size = \Large}
   \setbeamerfont*{title}{series = \bfseries, size = \Large}
+  \setbeamerfont*{institute in head/foot}{series* = dc}
+  \setbeamerfont{author in head/foot}{series* = dc}
+\else
+  \RequirePackage{helvet}
+  \setbeamerfont*{frametitle}{series = \bfseries, size = \Large}
+  \setbeamerfont*{title}{series = \bfseries, size = \Large}
+  \setbeamerfont*{institute in head/foot}{series* = bc}
+  \setbeamerfont*{author in head/foot}{series* = bc}
 \fi
 
 %% Einbinden des Hintergrundlogos ------------------------------------------- %%
@@ -154,16 +160,16 @@
   \hbox{
     \hspace{.01\paperwidth}
     \begin{beamercolorbox}[wd=.23\paperwidth, dp=1ex, ht=2ex]{}%
-      \fontseries{bc}\selectfont\insertshortinstitute
+      \usebeamerfont{institute in head/foot}\insertshortinstitute
     \end{beamercolorbox}
   }
   \hbox{
     \hspace{.01\paperwidth}
     \begin{beamercolorbox}[wd=.5\paperwidth, dp=1ex, ht=2ex]{}%
-      \fontseries{mc}\selectfont\insertshortauthor
+      \usebeamerfont{institute in head/foot}\insertshortauthor
     \end{beamercolorbox}
     \begin{beamercolorbox}[wd=.23\paperwidth, dp=1ex, ht=2ex]{}%
-      \fontseries{bc}\selectfont\uni
+      \usebeamerfont{institute in head/foot}\uni
     \end{beamercolorbox}
   }
   \hbox{
@@ -180,6 +186,7 @@
   \llap{\pgfuseimage{logosm}\hskip-.875\paperwidth}%
   \vspace{1ex}
 }
+
 
 %% Definiere die alternativen Fusszeilen in den jeweiligen Fakultaetsfarben
 \defbeamertemplate*{footline faculty}{UzK theme}
@@ -217,41 +224,41 @@
     \hspace{.01\paperwidth}
     \begin{beamercolorbox}[wd=.5\paperwidth, dp=.5ex, ht=2.5ex]{}%
       \ifbeamer@UzK@wiso%
-        \fontseries{bc}\selectfont\wiso
+        \usebeamerfont{institute in head/foot}\wiso
       \fi
       \ifbeamer@UzK@jura%
-        \fontseries{bc}\selectfont\jura
+        \usebeamerfont{institute in head/foot}\jura
       \fi
       \ifbeamer@UzK@medizin%
-        \fontseries{bc}\selectfont\medizin
+        \usebeamerfont{institute in head/foot}\medizin
       \fi
       \ifbeamer@UzK@philo%
-        \fontseries{bc}\selectfont\philo
+        \usebeamerfont{institute in head/foot}\philo
       \fi
       \ifbeamer@UzK@matnat%
-        \fontseries{bc}\selectfont\matnat
+        \usebeamerfont{institute in head/foot}\matnat
       \fi
       \ifbeamer@UzK@human%
-        \fontseries{bc}\selectfont\human
+        \usebeamerfont{institute in head/foot}\human
       \fi
       \ifbeamer@UzK@verw%
-        \fontseries{bc}\selectfont\verw
+        \usebeamerfont{institute in head/foot}\verw
       \fi
     \end{beamercolorbox}
   }
   \hbox{
     \hspace{.01\paperwidth}
     \begin{beamercolorbox}[wd=.5\paperwidth, dp=1ex, ht=2ex]{}%
-      \fontseries{bc}\selectfont\insertshortinstitute
+      \usebeamerfont{institute in head/foot}\insertshortinstitute
     \end{beamercolorbox}
     \begin{beamercolorbox}[]{}
-      \fontseries{bc}\selectfont\uni
+      \usebeamerfont{institute in head/foot}\uni
     \end{beamercolorbox}
   }
   \hbox{
     \hspace{.01\paperwidth}
     \begin{beamercolorbox}[wd=.23\paperwidth, dp=1ex, ht=2ex]{}%
-      \fontseries{mc}\selectfont\insertshortauthor
+      \usebeamerfont{author in head/foot}\insertshortauthor
     \end{beamercolorbox}
   }
   \vskip-1cm
