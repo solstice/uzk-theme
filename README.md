@@ -74,4 +74,4 @@ Mitwirkende und Dank an:
 
 - Jan Eden: Schriftart Fusszeile
 - Martin Engler: Sprachauswahl ueber babel, Platzierung der
-  Hintergrundgrafik
+  Hintergrundgrafik, Schriftauswahl mit `setbeamerfont`
