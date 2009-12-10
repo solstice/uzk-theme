@@ -1,6 +1,6 @@
 %% UzK - A BEAMER THEME FOR THE UNIVERSITY OF COLOGNE
 %% http://solstice.github.com/uzk-theme/
-\ProvidesPackage{beamerthemeUzK}[2009/08/30]
+\ProvidesPackage{beamerthemeUzK}[2009/12/10]
 
 \mode<presentation>
 
@@ -15,6 +15,7 @@
 \newif\ifbeamer@UzK@uk
 \newif\ifbeamer@UzK@nav
 \newif\ifbeamer@UzK@latexfonts
+\newif\ifbeamer@UzK@colorful
 
 %% Standardmaessig sind diese Variablen auf 'false' gesetzt. Falls keine      %%
 %% Fakultaet uebergeben wird, soll 'uk' verwendet werden: ------------------- %%
@@ -28,13 +29,15 @@
 \beamer@UzK@uktrue
 \beamer@UzK@navfalse
 \beamer@UzK@latexfontsfalse
+\beamer@UzK@colorfulfalse
 
 %% Definiere die moeglichen Optionen ---------------------------------------- %%
 
 %% Die Variable \fak wird in beamercolorthemeuzk.sty verwendet, um die Farben %%
 %% fuer exampleblocks zu kontrollieren. Sie wird hier bereits gesetzt falls   %%
 %% kein Fakultaetsname uebergeben wird. ------------------------------------- %%
-\newcommand{\fak}{wiso}
+\newcommand{\fak}[1][]{wiso}
+\renewcommand{\fak}{wiso}
 %% Ausserdem wird die Variable \beamer@Uzk@uk auf false gesetzt, falls eine   %%
 %% Fakultaet angegeben wurde. ----------------------------------------------- %%
 \DeclareOptionBeamer{wiso}{\beamer@UzK@wisotrue \beamer@UzK@ukfalse \renewcommand{\fak}{wiso}}
@@ -46,6 +49,7 @@
 \DeclareOptionBeamer{verw}{\beamer@UzK@verwtrue \beamer@UzK@ukfalse \renewcommand{\fak}{verw}}
 \DeclareOptionBeamer{nav}{\beamer@UzK@navtrue}
 \DeclareOptionBeamer{latexfonts}{\beamer@UzK@latexfontstrue}
+\DeclareOptionBeamer{colorful}{\beamer@UzK@colorfultrue}
 
 \ProcessOptionsBeamer
 

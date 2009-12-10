@@ -1,6 +1,6 @@
 %% UzK - A BEAMER THEME FOR THE UNIVERSITY OF COLOGNE
 %% http://solstice.github.com/uzk-theme/
-\ProvidesPackage{beamercolorthemeUzK}[2009/08/30]
+\ProvidesPackage{beamercolorthemeUzK}[2009/12/10]
 
 \mode<presentation>
 
@@ -11,12 +11,19 @@
 
 %% Fakultaetsfarben
 \definecolor{wiso}{RGB}{131,175,35}
+\definecolor{wiso{light}}{RGB}{171, 215,75}
 \definecolor{jura}{RGB}{125,50,29}
+\definecolor{jura{light}}{RGB}{155,80,59}
 \definecolor{medizin}{RGB}{175,17,29}
+\definecolor{medizin{light}}{RGB}{205,37,59}
 \definecolor{philo}{RGB}{89,15,104}
+\definecolor{philo{light}}{RGB}{119,45,134}
 \definecolor{matnat}{RGB}{0,130,198}
+\definecolor{matnat{light}}{RGB}{30,160,228}
 \definecolor{human}{RGB}{219,166,25}
+\definecolor{human{light}}{RGB}{249,196,55}
 \definecolor{verw}{RGB}{145,196,234}
+\definecolor{verw{light}}{RGB}{175,226,255}
 
 %% Grautoene
 \definecolor{blaugrau}{RGB}{122,147,171}
@@ -34,10 +41,20 @@
 \setbeamercolor*{uzk human}{fg=black, bg=human}
 \setbeamercolor*{uzk verw}{fg=black, bg=verw}
 
-\setbeamercolor*{palette primary}{fg=white,bg=blaugrauhell}
-\setbeamercolor*{palette secondary}{fg=white,bg=blaugrauhell}
-\setbeamercolor*{palette tertiary}{fg=black,bg=hellerfond}
-\setbeamercolor*{palette quaternary}{fg=white,bg=philo}
+%% Definiere die Farbpaletten
+%% Farbige Paletten
+\ifbeamer@UzK@colorful
+  \setbeamercolor*{palette primary}{fg=white,bg=\fak{light}}
+  \setbeamercolor*{palette secondary}{fg=white,bg=blaugrauhell}
+  \setbeamercolor*{palette tertiary}{fg=white,bg=\fak}
+  \setbeamercolor*{palette quaternary}{fg=white,bg=\fak}
+\else
+%% graue Paletten
+  \setbeamercolor*{palette primary}{fg=white,bg=blaugrauhell}
+  \setbeamercolor*{palette secondary}{fg=white,bg=blaugrauhell}
+  \setbeamercolor*{palette tertiary}{fg=blaugraudunkel,bg=hellerfond}
+  \setbeamercolor*{palette quaternary}{fg=blaugraudunkel,bg=hellerfond}
+\fi
 
 \setbeamercolor*{author in head/foot}{parent=palette primary}
 
