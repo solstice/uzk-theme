@@ -76,6 +76,10 @@ Beamer-Pr&auml;sentation im Corporate Design der Universit&auml;t zu K&ouml;ln:
 <pre>
 \documentclass{beamer}
 
+% Gliederung
+% \useoutertheme{infolines}
+% \useoutertheme{split}
+
 \usetheme[%
 wiso,       %% Wiso-Fakultaet
 %jura,       %% Rechtswissenschaftliche Fakultaet
@@ -86,6 +90,7 @@ wiso,       %% Wiso-Fakultaet
 %verw,       %% Universitaetsverwaltung
 %nav,        %% Schalte Navigationssymbole ein
 %latexfonts, %% Verwende CM-Schriften
+%colorful,   %% Verwende Fakultaetsfarben als primary, sec. etc. palette, ansonsten grau
 ]{UzK}
 
 \title{Meine Pr&auml;sentation}
@@ -112,6 +117,14 @@ human</tt> und <tt>verw</tt>.</p>
 Option <tt>english</tt> des Pakets <tt>babel</tt>. Der Name der
 Universit&auml;t sowie die Fakult&auml;tsnamen werden dann
 entsprechend angepasst.
+</p>
+
+<p>
+Durch das Laden der outer themes <tt>infolines</tt> bzw. <tt>split</tt>
+wird die Gliederung der Pr&auml;sentation im Seitenkopf angezeigt. Die
+Hintergrundfarben der Gliederung sind in Graut&ouml;nen gehalten. Mit der
+Option <tt>colorful</tt> werden die jeweiligen Fakult&auml;tsfarben als
+Hintergrundfarben verwendet.
 </p>
 
 <p> Aufgrund des Urheberrechts k&ouml;nnen wir die Logo-Dateien nicht
