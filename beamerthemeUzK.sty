@@ -172,13 +172,13 @@
   \hbox{
     \hspace{.01\paperwidth}
     \begin{beamercolorbox}[wd=.23\paperwidth, dp=1ex, ht=2ex]{}%
-      \usebeamerfont{institute in head/foot}\insertshortinstitute
+      \usebeamerfont{institute in head/foot}\insertshortauthor
     \end{beamercolorbox}
   }
   \hbox{
     \hspace{.01\paperwidth}
     \begin{beamercolorbox}[wd=.5\paperwidth, dp=1ex, ht=2ex]{}%
-      \usebeamerfont{institute in head/foot}\insertshortauthor
+      \usebeamerfont{institute in head/foot}\insertshortinstitute
     \end{beamercolorbox}
     \begin{beamercolorbox}[wd=.23\paperwidth, dp=1ex, ht=2ex]{}%
       \usebeamerfont{institute in head/foot}\uni
@@ -232,9 +232,24 @@
     \end{beamercolorbox}%
       }
   \vskip.5em
+\hbox{
+    \hspace{.01\paperwidth}
+    \begin{beamercolorbox}[wd=.23\paperwidth, dp=1ex, ht=2.5ex]{}%
+      \usebeamerfont{author in head/foot}\insertshortauthor
+    \end{beamercolorbox}
+  }
   \hbox{
     \hspace{.01\paperwidth}
-    \begin{beamercolorbox}[wd=.5\paperwidth, dp=1ex, ht=2.5ex]{}%
+    \begin{beamercolorbox}[wd=.5\paperwidth, dp=1ex, ht=2ex]{}%
+      \usebeamerfont{institute in head/foot}\insertshortinstitute
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[]{}
+      \usebeamerfont{institute in head/foot}\uni
+    \end{beamercolorbox}
+  }
+\hbox{
+    \hspace{.01\paperwidth}
+    \begin{beamercolorbox}[wd=.5\paperwidth, dp=1ex, ht=2ex]{}%
       \ifbeamer@UzK@wiso%
         \usebeamerfont{institute in head/foot}\wiso
       \fi
@@ -256,21 +271,6 @@
       \ifbeamer@UzK@verw%
         \usebeamerfont{institute in head/foot}\verw
       \fi
-    \end{beamercolorbox}
-  }
-  \hbox{
-    \hspace{.01\paperwidth}
-    \begin{beamercolorbox}[wd=.5\paperwidth, dp=1ex, ht=2ex]{}%
-      \usebeamerfont{institute in head/foot}\insertshortinstitute
-    \end{beamercolorbox}
-    \begin{beamercolorbox}[]{}
-      \usebeamerfont{institute in head/foot}\uni
-    \end{beamercolorbox}
-  }
-  \hbox{
-    \hspace{.01\paperwidth}
-    \begin{beamercolorbox}[wd=.23\paperwidth, dp=1ex, ht=2ex]{}%
-      \usebeamerfont{author in head/foot}\insertshortauthor
     \end{beamercolorbox}
   }
   \vskip-1cm
