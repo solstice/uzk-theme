@@ -80,6 +80,12 @@
 \setbeamerfont*{subsection in toc}{size = \footnotesize}
 \setbeamertemplate{section in toc}[sections numbered]
 
+%% Lege feste Schriftgroesse fuer die Fusszeile fest, damit die Schrift-      %%
+%% groesse des Dokuments als Option an \documentclass uebergeben werden       %%
+%% kann --------------------------------------------------------------------- %%
+\setbeamerfont{institute in head/foot}{size*={6pt}{6.2pt}}
+\setbeamerfont{author in head/foot}{size*={6pt}{6.2pt}}
+
 %% Aussehen der itemize-Umgebung -------------------------------------------- %%
 \setbeamertemplate{itemize items}[circle]
 
@@ -150,42 +156,43 @@
 {
   \leavevmode%
   \hbox{%
-    \begin{beamercolorbox}[wd=.125\paperwidth, ht=1.5ex]{uzk wiso}
+    \begin{beamercolorbox}[wd=.125\paperwidth, ht=4.7pt]{uzk wiso}
     \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.125\paperwidth, ht=1.5ex]{uzk jura}
+    \begin{beamercolorbox}[wd=.125\paperwidth, ht=4.7pt]{uzk jura}
     \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.125\paperwidth, ht=1.5ex]{uzk medizin}
+    \begin{beamercolorbox}[wd=.125\paperwidth, ht=4.7pt]{uzk medizin}
     \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.125\paperwidth, ht=1.5ex]{uzk philo}
+    \begin{beamercolorbox}[wd=.125\paperwidth, ht=4.7pt]{uzk philo}
     \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.125\paperwidth, ht=1.5ex]{uzk matnat}
+    \begin{beamercolorbox}[wd=.125\paperwidth, ht=4.7pt]{uzk matnat}
     \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.125\paperwidth, ht=1.5ex]{uzk human}
+    \begin{beamercolorbox}[wd=.125\paperwidth, ht=4.7pt]{uzk human}
     \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.125\paperwidth, ht=1.5ex]{uzk verw}
+    \begin{beamercolorbox}[wd=.125\paperwidth, ht=4.7pt]{uzk verw}
     \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.125\paperwidth, ht=1.5ex, center]{date in head/foot}
+    \begin{beamercolorbox}[wd=.125\paperwidth, ht=4.7pt, center]{date in head/foot}
       \insertframenumber{} / \inserttotalframenumber
     \end{beamercolorbox}%
   }
-  \vskip.5em
+
+  \vskip2pt
   \hbox{
     \hspace{.01\paperwidth}
-    \begin{beamercolorbox}[wd=.23\paperwidth, dp=1ex, ht=2ex]{}%
+    \begin{beamercolorbox}[wd=.23\paperwidth, dp=3pt, ht=8pt]{}%
       \usebeamerfont{institute in head/foot}\insertshortauthor
     \end{beamercolorbox}
   }
   \hbox{
     \hspace{.01\paperwidth}
-    \begin{beamercolorbox}[wd=.5\paperwidth, dp=1ex, ht=2ex]{}%
+    \begin{beamercolorbox}[wd=.5\paperwidth, dp=2pt, ht=6pt]{}%
       \usebeamerfont{institute in head/foot}\insertshortinstitute
     \end{beamercolorbox}
-    \begin{beamercolorbox}[wd=.23\paperwidth, dp=1ex, ht=2ex]{}%
+    \begin{beamercolorbox}[wd=.23\paperwidth, dp=4pt, ht=6pt]{}%
       \usebeamerfont{institute in head/foot}\uni
     \end{beamercolorbox}
   }
   \hbox{
-    \begin{beamercolorbox}[wd=.23\paperwidth, dp=1ex, ht=2ex]{}%
+    \begin{beamercolorbox}[wd=.23\paperwidth, dp=2pt, ht=6pt]{}%
     \end{beamercolorbox}
 }
 %   \hbox{
@@ -196,7 +203,7 @@
 %   }
   \vskip-1cm
   \llap{\pgfuseimage{logosm}\hskip-.875\paperwidth}%
-  \vspace{1ex}
+  \vspace{2pt}
 }
 
 
@@ -206,41 +213,41 @@
   \leavevmode%
   \hbox{%
   \ifbeamer@UzK@wiso%
-    \begin{beamercolorbox}[wd=.875\paperwidth, ht=1.5ex]{uzk wiso}
+    \begin{beamercolorbox}[wd=.875\paperwidth, ht=4.7pt]{uzk wiso}
   \fi
   \ifbeamer@UzK@jura%
-    \begin{beamercolorbox}[wd=.875\paperwidth, ht=1.5ex]{uzk jura}
+    \begin{beamercolorbox}[wd=.875\paperwidth, ht=4.7pt]{uzk jura}
   \fi
   \ifbeamer@UzK@medizin%
-    \begin{beamercolorbox}[wd=.875\paperwidth, ht=1.5ex]{uzk medizin}
+    \begin{beamercolorbox}[wd=.875\paperwidth, ht=4.7pt]{uzk medizin}
   \fi
   \ifbeamer@UzK@philo%
-    \begin{beamercolorbox}[wd=.875\paperwidth, ht=1.5ex]{uzk philo}
+    \begin{beamercolorbox}[wd=.875\paperwidth, ht=4.7pt]{uzk philo}
   \fi
   \ifbeamer@UzK@matnat%
-    \begin{beamercolorbox}[wd=.875\paperwidth, ht=1.5ex]{uzk matnat}
+    \begin{beamercolorbox}[wd=.875\paperwidth, ht=4.7pt]{uzk matnat}
   \fi
   \ifbeamer@UzK@human%
-    \begin{beamercolorbox}[wd=.875\paperwidth, ht=1.5ex]{uzk human}
+    \begin{beamercolorbox}[wd=.875\paperwidth, ht=4.7pt]{uzk human}
   \fi
   \ifbeamer@UzK@verw%
-    \begin{beamercolorbox}[wd=.875\paperwidth, ht=1.5ex]{uzk verw}
+    \begin{beamercolorbox}[wd=.875\paperwidth, ht=4.7pt]{uzk verw}
   \fi
     \end{beamercolorbox}%
-    \begin{beamercolorbox}[wd=.125\paperwidth, ht=1.5ex, center]{date in head/foot}
+    \begin{beamercolorbox}[wd=.125\paperwidth, ht=4.7pt, center]{date in head/foot}
       \insertframenumber{} / \inserttotalframenumber
     \end{beamercolorbox}%
       }
-  \vskip.5em
+  \vskip2pt
 \hbox{
     \hspace{.01\paperwidth}
-    \begin{beamercolorbox}[wd=.23\paperwidth, dp=1ex, ht=2.5ex]{}%
+    \begin{beamercolorbox}[wd=.23\paperwidth, dp=3pt, ht=8pt]{}%
       \usebeamerfont{author in head/foot}\insertshortauthor
     \end{beamercolorbox}
   }
   \hbox{
     \hspace{.01\paperwidth}
-    \begin{beamercolorbox}[wd=.5\paperwidth, dp=1ex, ht=2ex]{}%
+    \begin{beamercolorbox}[wd=.5\paperwidth, dp=4pt, ht=6pt]{}%
       \usebeamerfont{institute in head/foot}\insertshortinstitute
     \end{beamercolorbox}
     \begin{beamercolorbox}[]{}
@@ -249,7 +256,7 @@
   }
 \hbox{
     \hspace{.01\paperwidth}
-    \begin{beamercolorbox}[wd=.5\paperwidth, dp=1ex, ht=2ex]{}%
+    \begin{beamercolorbox}[wd=.5\paperwidth, dp=3pt, ht=5pt]{}%
       \ifbeamer@UzK@wiso%
         \usebeamerfont{institute in head/foot}\wiso
       \fi
@@ -275,7 +282,7 @@
   }
   \vskip-1cm
   \llap{\pgfuseimage{logosm}\hskip-.875\paperwidth}%
-  \vspace{1ex}
+  \vspace{2pt}
 }
 
 %% Waehle die Fusszeile entsprechend der uebergebenen Option
