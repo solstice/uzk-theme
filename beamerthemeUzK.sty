@@ -16,6 +16,7 @@
 \newif\ifbeamer@UzK@nav
 \newif\ifbeamer@UzK@latexfonts
 \newif\ifbeamer@UzK@colorful
+\newif\ifbeamer@UzK@squares
 
 %% Standardmaessig sind diese Variablen auf 'false' gesetzt. Falls keine      %%
 %% Fakultaet uebergeben wird, soll 'uk' verwendet werden: ------------------- %%
@@ -30,6 +31,7 @@
 \beamer@UzK@navfalse
 \beamer@UzK@latexfontsfalse
 \beamer@UzK@colorfulfalse
+\beamer@UzK@squaresfalse
 
 %% Definiere die moeglichen Optionen ---------------------------------------- %%
 
@@ -50,6 +52,7 @@
 \DeclareOptionBeamer{nav}{\beamer@UzK@navtrue}
 \DeclareOptionBeamer{latexfonts}{\beamer@UzK@latexfontstrue}
 \DeclareOptionBeamer{colorful}{\beamer@UzK@colorfultrue}
+\DeclareOptionBeamer{squares}{\beamer@UzK@squarestrue}
 
 \ProcessOptionsBeamer
 
@@ -87,7 +90,11 @@
 \setbeamerfont{author in head/foot}{size*={6pt}{6.2pt}}
 
 %% Aussehen der itemize-Umgebung -------------------------------------------- %%
-\setbeamertemplate{itemize items}[circle]
+\ifbeamer@UzK@squares%
+  \setbeamertemplate{itemize items}[square]%
+\else%
+  \setbeamertemplate{itemize items}[circle]%
+\fi
 
 %% Einbinden des Hintergrundlogos ------------------------------------------- %%
 \defbeamertemplate*{background}{UzK theme}{%
