@@ -72,6 +72,9 @@ damit TeX von der Existenz des neuen Ordners erfaehrt.
 Mitwirkende und Dank an:
 ------------------------
 
+- Bernd Weiﬂ: Initiative und allgemeinen Code
 - Jan Eden: Schriftart Fusszeile
 - Martin Engler: Sprachauswahl ueber babel, Platzierung der
   Hintergrundgrafik, Schriftauswahl mit `setbeamerfont`
+- Jonas Stein: Hilfe bei den Logos und Dateirechten
+- Axel Berger: Option 'squares'
