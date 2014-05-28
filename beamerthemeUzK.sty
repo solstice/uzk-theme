@@ -17,6 +17,7 @@
 \newif\ifbeamer@UzK@latexfonts
 \newif\ifbeamer@UzK@colorful
 \newif\ifbeamer@UzK@squares
+\newif\ifbeamer@UzK@nologo
 
 %% Standardmaessig sind diese Variablen auf 'false' gesetzt. Falls keine      %%
 %% Fakultaet uebergeben wird, soll 'uk' verwendet werden: ------------------- %%
@@ -32,6 +33,7 @@
 \beamer@UzK@latexfontsfalse
 \beamer@UzK@colorfulfalse
 \beamer@UzK@squaresfalse
+\beamer@UzK@nologofalse
 
 %% Definiere die moeglichen Optionen ---------------------------------------- %%
 
@@ -53,6 +55,7 @@
 \DeclareOptionBeamer{latexfonts}{\beamer@UzK@latexfontstrue}
 \DeclareOptionBeamer{colorful}{\beamer@UzK@colorfultrue}
 \DeclareOptionBeamer{squares}{\beamer@UzK@squarestrue}
+\DeclareOptionBeamer{nologo}{\beamer@UzK@nologotrue}
 
 \ProcessOptionsBeamer
 
@@ -97,6 +100,8 @@
 \fi
 
 %% Einbinden des Hintergrundlogos ------------------------------------------- %%
+\ifbeamer@UzK@nologo%
+\else%
 \defbeamertemplate*{background}{UzK theme}{%
   \begingroup%
   \setlength{\unitlength}{\paperwidth}%
@@ -107,6 +112,7 @@
   \end{picture}%
   \endgroup%
 }
+\fi
 
 %% Definiere das kleine Siegel ---------------------------------------------- %%
 \pgfdeclareimage[height=1cm]{logosm}{logo-small}%
